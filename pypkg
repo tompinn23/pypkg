@@ -1,0 +1,18 @@
+#!/bin/python
+from pkglib.loader import PkgFinder
+import sys
+
+
+
+
+
+
+def main():
+    sys.meta_path.insert(0, PkgFinder())
+
+    import packages.zlib
+    print(packages.zlib.pkgname)
+
+
+if __name__ == "__main__":
+	main()
